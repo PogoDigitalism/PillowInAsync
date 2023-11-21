@@ -2,7 +2,7 @@ class Config:
     """
     You will have to tweak these settings a lot until they match with your base template (IMAGE_FILE).
 
-    These standard settings are not configured for the template 'example.png' either.
+    These standard settings are not configured for the template 'concept2.png' either.
     """
 
     IMAGE_GEN = {
@@ -27,7 +27,7 @@ class Config:
                         },
                       },
 
-        'IMAGE_FILE': 'example.png', # serves as a template
+        'IMAGE_FILE': 'concept2.png', # serves as a template
         'SIZE': (1450, 600), # template size
         'FONT': 'segoeuib.ttf',
         'FONT_SIZE': 40,
