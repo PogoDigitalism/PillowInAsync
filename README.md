@@ -1,4 +1,4 @@
-# Allows for Pillow image generation in an asynchronous environment without blocking the event loop. ⭐
+# Allows for Pillow image generation in an asynchronous environment without synchronously blocking the event loop. ⭐
 
 
 ## how to do it:
