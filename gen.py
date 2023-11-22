@@ -24,7 +24,7 @@ def GenerateImage(AD_IMG_DATA: dict[str, list[list[int], int, int]]) -> discord.
     """
     As Pillow is synchronous, you want to run this in a seperate thread. Use multithreading for this!
     
-    AD_IMG_DATA EXAMPLE: {'OFFER': [[sshf_url, sshf_url, pv_url, skotn_url], robux], 'REQUEST': [[cwhp_url], robux]}
+    AD_IMG_DATA EXAMPLE: {'OFFER': [[sshf_url, sshf_url, pv_url, skotn_url], robux, value], 'REQUEST': [[cwhp_url], robux, value]}
     """
   
     IMG_CONFIG = Config.IMAGE_GEN
