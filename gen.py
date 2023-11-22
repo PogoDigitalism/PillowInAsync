@@ -1,3 +1,9 @@
+from PIL import Image, ImageDraw, ImageFont
+from io import BytesIO
+import discord
+from config import Config
+import requests
+
 def _IMGtoFILE(IMG: Image) -> discord.File:
     with BytesIO() as image_binary:
         IMG.save(image_binary, 'PNG')
@@ -11,7 +17,7 @@ def _URLtoIMG(URL: str) -> Image:
     
     return Image.open(BytesIO(BYTES_CONTENT))
 
-def GenerateImage(AD_IMG_DATA: dict[str, list[list[int], int]]) -> discord.File:
+def GenerateImage(AD_IMG_DATA: dict[str, list[list[int], int, int]]) -> discord.File:
     """
     As Pillow is synchronous, you want to run this in a seperate thread. Use multithreading for this!
     
@@ -20,7 +26,7 @@ def GenerateImage(AD_IMG_DATA: dict[str, list[list[int], int]]) -> discord.File:
   
     IMG_CONFIG = Config.IMAGE_GEN
 
-    IMG_SIZE = Image.open(IMG_CONFIG['SIZE'])
+    IMG_SIZE = IMG_CONFIG['SIZE']
     IMG_FONT = ImageFont.truetype(IMG_CONFIG['FONT'], IMG_CONFIG['FONT_SIZE'])
     IMG_CONSTANTS = IMG_CONFIG['CONSTANTS']
     IMG_TEMPLATE = Image.open(IMG_CONFIG['IMAGE_FILE'])
@@ -38,7 +44,7 @@ def GenerateImage(AD_IMG_DATA: dict[str, list[list[int], int]]) -> discord.File:
     # Add text to template
     draw = ImageDraw.Draw(main)
     for side in AD_IMG_DATA:
-        value_text = IMG_CONSTANTS[side]['SIDE_TEXT']
+        value_text = str(AD_IMG_DATA[side][2])
         draw.text(IMG_CONSTANTS[side]['VALUE'], value_text, font=IMG_FONT, align="left", fill=IMG_CONSTANTS[side]['VALUE_RGBA'])
 
         robux_text = f'{AD_IMG_DATA[side][1]} Robux'
