@@ -1,3 +1,4 @@
+# Example for a Rolimons trade advertisment image generator command. The passed args at line 14 should be replaced with your own trade advertisement information.
 import discord
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
