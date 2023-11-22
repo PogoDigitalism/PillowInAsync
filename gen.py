@@ -1,3 +1,6 @@
+# Synchronous image generator example
+# make sure to read async_example.py to understand how to asynchronously generate images with Pillow 
+
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 import discord
