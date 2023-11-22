@@ -11,7 +11,7 @@ async def task_ImageGeneration(loop):
   
 async def main():
     loop = asyncio.get_event_loop()
-    loop.create_task(task_ImageGeneration(loop))
+    loop.create_task(task_ImageGeneration(loop)) # create a task if you dont want the execution of main() to be blocked, else just call loop.run_in_executor here directly.
 
 
 asyncio.run(main())
