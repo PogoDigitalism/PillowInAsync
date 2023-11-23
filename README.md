@@ -1,7 +1,7 @@
 # Allows for Pillow image generation in an asynchronous environment without synchronously blocking the event loop. ⭐
 
 
-## how to do it:
+## how to achieve it:
 (check for **async_example.py** in the **examples** folder for a pseudo code showcase of how it works)
 
 - Instance a ThreadPoolExecutor()
