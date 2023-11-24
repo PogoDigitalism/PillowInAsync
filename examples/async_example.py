@@ -1,8 +1,6 @@
 #An example of how to handle synchronous code (Pillow) in an asynchronous environment using ThreadPoolExecutor.
 
 # !! This example is *PSEUDO-ish CODE*
-
-import discord
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
 from gen import GenerateImage
