@@ -1,6 +1,6 @@
-I wrote a copy-paste class [`SyncInAsync`](https://github.com/PogoDigitalism/SyncInAsync) for calling non-blocking synchronous functions in asynchronous code!
+⭐ *I wrote a copy-paste class [`SyncInAsync`](https://github.com/PogoDigitalism/SyncInAsync) for calling non-blocking synchronous functions in asynchronous code!*
 
-# Allows for Pillow image generation in an asynchronous environment without synchronously blocking the event loop. ⭐
+## Allows for Pillow image generation in an asynchronous environment without synchronously blocking the event loop.
 
 
 ## how to achieve it:
